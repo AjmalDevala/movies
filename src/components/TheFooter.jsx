@@ -46,12 +46,19 @@ const TheFooter = () => {
             <IconVercel />
           </a>
         </div>
-        <div className="flex items-center gap-2">
-          <span>Language:</span>
+        <div className="flex items-center gap-2.5">
+          <span>Languages:</span>
           <label htmlFor="langSwitcher" className="sr-only"></label>
-          <select id="langSwitcher" className="rounded-md text-sm p-1">
+          <select
+            id="langSwitcher"
+            className="rounded-s-md text-sm p-2 bg-[#ccd2dc26]"
+          >
             {lang.map((lag, index) => (
-              <option key={`${lag}-${index}`} value={lag}>
+              <option
+                className="bg-[#403b3b]"
+                key={`${lag}-${index}`}
+                value={lag}
+              >
                 {lag}
               </option>
             ))}

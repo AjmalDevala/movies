@@ -55,14 +55,13 @@ const HeroMedia = ({ item }) => {
             >
               {item?.overview}
             </p>
-
             <div className="py-5 hidden lg:block">
               <button
                 type="button"
                 title="Watch Trailer"
-                className="flex gap-2 items-center px-6 py-3 transition-colors duration-200 hover:bg-[#9ca3af26]"
+                className="flex gap-2 items-center px-6 py-3 transition-colors duration-200 bg-[#4d6ea326] hover:bg-[#1f212426]"
               >
-                <div className="i-ph-play"></div>
+                <div className="i-ph-play">{}</div>
                 <span>Watch Trailer</span>
               </button>
             </div>
