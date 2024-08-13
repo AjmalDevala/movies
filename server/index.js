@@ -11,7 +11,6 @@ const ipx = createIPX({
   storage: ipxFSStorage({ dir: "./public" }),
   httpStorage: ipxHttpStorage({ domains: ["picsum.photos"] }),
 });
-
 const app = createApp().use("/", createIPXH3Handler(ipx));
 
 listen(app);

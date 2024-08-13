@@ -6,7 +6,6 @@ async function fetchTMDB(url, params = {}) {
     params: { ...TMDB_API_PARAMS, ...params },
   });
 }
-
 export async function listMedia(type, query, page = 1) {
   return fetchTMDB(`${type}/${query}`, { page });
 }
