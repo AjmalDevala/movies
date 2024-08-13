@@ -6,12 +6,22 @@ import TVShows from "@/pages/genre/[no]/tv";
 import MediaType from "@/pages/[type]/[id]";
 import Search from "@/pages/search";
 import MediaQuery from "@/pages/[type]/category/[query]";
+import LoginPage from "@/pages/Auth/Login";
+import RegisterPage from "@/pages/Auth/Signup";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
+      {
+        path: "/login",
+        element: <LoginPage />,
+      },
+      {
+        path: "/register",
+        element: <RegisterPage />,
+      },
       {
         path: "/movie",
         element: <Movies />,
