@@ -8,5 +8,6 @@ const TMDB_API_PARAMS = {
   api_key: import.meta.env.VITE_TMDB_API_KEY,
   language: "en",
 };
+console.log(TMDB_API_PARAMS, "testing");
 
 export { TMDB_API_URL, TMDB_API_PARAMS, imgBaseURL };
