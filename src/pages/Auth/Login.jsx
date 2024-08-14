@@ -46,7 +46,7 @@ const LoginPage = () => {
                 </label>
                 <div className="text-sm">
                   <a
-                    href="#"
+                    href="/forgetPassword"
                     className="font-semibold text-indigo-600 hover:text-indigo-500"
                   >
                     Forgot password?
@@ -74,20 +74,19 @@ const LoginPage = () => {
 
             <div>
               <button
-                type="submit"
+                onClick="/"
                 className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Sign in
               </button>
             </div>
           </form>
-
-          <div className="mt-10 text-center text-sm text-gray-500">
-            Not a member?{" "}
-            <div className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
-              Start a 14-day free trial
-            </div>
-          </div>
+          <p
+            className="flex items-end  mt-10 text-center text-sm text-gray-500 "
+            href="/register"
+          >
+            Not a member?
+          </p>
         </div>
       </div>
     </div>
