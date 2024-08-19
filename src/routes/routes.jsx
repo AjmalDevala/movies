@@ -9,6 +9,7 @@ import MediaQuery from "@/pages/[type]/category/[query]";
 import LoginPage from "@/pages/[Auth]/Login";
 import RegisterPage from "@/pages/[Auth]/Signup";
 import ForgetPassword from "@/pages/[Auth]/forgetPassword";
+import PageNotFound from "@/404";
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
       {
         path: "/search",
         element: <Search />,
+      },
+      {
+        path: "*",
+        element: <PageNotFound />,
       },
     ],
   },
