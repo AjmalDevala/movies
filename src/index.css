@@ -73,6 +73,19 @@
     }
 
 }
+.button {
+    display: flex;             /* Use flexbox layout */
+    gap: 2rem;                 /* Space between items */
+    align-items: center;       /* Center items vertically */
+    padding: 0.75rem 1.5rem;   /* Padding: 12px top-bottom, 24px left-right */
+    transition: background-color 0.2s ease;  /* Smooth background transition */
+    background-color: #4d6ea326;  /* Initial background color */
+}
+
+.button:hover {
+    background-color: #1f212426;  /* Background color on hover */
+}
+
 
 .media-card {
     width: 200px !important;
