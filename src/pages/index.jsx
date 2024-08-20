@@ -49,7 +49,7 @@ const MediaComponent = ({ isRoot = false }) => {
 
   return (
     <>
-      <div className="flex justify-around">
+      <div className="lg:flex justify-around p-2">
         <h1>{value}</h1>
         <button className="button" onClick={() => dispatch(increment())}>
           Increment
@@ -61,7 +61,11 @@ const MediaComponent = ({ isRoot = false }) => {
             Decrement
           </button>
         )}
+        <Link to={`/login`}>
+          <button className="gdbutton">Login</button>
+        </Link>
       </div>
+
       <Link
         to={`/${type}/${item?.id || ""}`}
         className={!item?.id ? "hover:cursor-not-allowed" : ""}

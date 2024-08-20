@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const LoginPage = () => {
   const [showPassword, setShowPassword] = React.useState(false);
@@ -16,7 +17,7 @@ const LoginPage = () => {
         </h2>
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form className="space-y-6">
+          <form action="/" className="space-y-6">
             <div>
               <label
                 htmlFor="email"
@@ -45,12 +46,12 @@ const LoginPage = () => {
                   Password
                 </label>
                 <div className="text-sm">
-                  <a
-                    href="/forgetPassword"
+                  <Link
+                    to="/forgetPassword"
                     className="font-semibold text-indigo-600 hover:text-indigo-500"
                   >
                     Forgot password?
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="mt-2 relative">
@@ -81,12 +82,12 @@ const LoginPage = () => {
               </button>
             </div>
           </form>
-          <p
+          <Link
+            to="/register"
             className="flex items-end  mt-10 text-center text-sm text-gray-500 "
-            href="/register"
           >
             Not a member?
-          </p>
+          </Link>
         </div>
       </div>
     </div>
