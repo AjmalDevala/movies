@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const RegisterPage = () => {
   const [showPassword, setShowPassword] = React.useState(false);
@@ -128,9 +129,9 @@ const RegisterPage = () => {
 
                   <p className="mt-4 text-sm text-gray-500 sm:mt-0">
                     Already have an account?
-                    <a href="/login" className="text-gray-700 underline">
+                    <Link to="/login" className="text-gray-700 underline">
                       Log in
-                    </a>
+                    </Link>
                     .
                   </p>
                 </div>

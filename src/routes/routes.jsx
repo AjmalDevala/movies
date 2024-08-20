@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-
+// pages
 import App from "@/App";
 import Movies from "@/pages/genre/[no]/movie";
 import TVShows from "@/pages/genre/[no]/tv";
