@@ -18,7 +18,7 @@ const LoginPage = () => {
     e.preventDefault();
     const storedEmail = localStorage.getItem("email");
     const storedPassword = localStorage.getItem("password");
-    if (email === "ajith.kv@ampcome.com" && password === storedPassword) {
+    if (email === storedEmail && password === storedPassword) {
       if (email === storedEmail && password === storedPassword) {
         navigate("/");
       } else {
@@ -115,7 +115,7 @@ const LoginPage = () => {
           {!isRegistered && (
             <Link
               to="/register"
-              className="flex items-end mt-10 text-center text-sm text-gray-500 "
+              className="flex items-end mt-2 text-center text-sm text-gray-500 "
             >
               Not a member?
             </Link>

@@ -1,21 +1,20 @@
-// src/features/exampleSlice.js
 import { createSlice } from "@reduxjs/toolkit";
 
 const starSlice = createSlice({
-  name: "Star",
+  name: "star",
   initialState: {
-    value: 0,
+    rating: 0,
   },
   reducers: {
-    increment: (state) => {
-      state.value += 1;
+    incrementRating: (state) => {
+      state.rating += 1;
     },
-    decrement: (state) => {
-      state.value -= 1;
+    decrementRating: (state) => {
+      state.rating -= 1;
     },
   },
 });
 
-export const { increment, decrement } = starSlice.actions;
+export const { incrementRating, decrementRating } = starSlice.actions;
 
 export default starSlice.reducer;

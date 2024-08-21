@@ -4,7 +4,7 @@ import useHead from "./hooks/useHead";
 import NavBar from "@/components/NavBar";
 
 const App = () => {
-  useHead(""); // reset title if not available
+  useHead("lo"); // reset title if not available
 
   const { pathname } = useLocation();
 

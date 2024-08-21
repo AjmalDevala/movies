@@ -10,6 +10,8 @@ import LoginPage from "@/pages/[Auth]/Login";
 import RegisterPage from "@/pages/[Auth]/Signup";
 import ForgetPassword from "@/pages/[Auth]/forgetPassword";
 import PageNotFound from "@/404";
+import ProtectedRoute from "@/config/ProtectedRoute"; // Import the ProtectedRoute component
+import MovieLandingPage from "@/pages/MovieLandingPage";
 
 const router = createBrowserRouter([
   {
@@ -28,37 +30,70 @@ const router = createBrowserRouter([
         path: "/forgetPassword",
         element: <ForgetPassword />,
       },
+      // Protected routes start here
       {
         path: "/movie",
-        element: <Movies />,
+        element: (
+          <ProtectedRoute>
+            <Movies />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/tv",
-        element: <TVShows />,
+        element: (
+          <ProtectedRoute>
+            <TVShows />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/movie/:id",
-        element: <MediaType />,
+        element: (
+          <ProtectedRoute>
+            <MediaType />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/tv/:id",
-        element: <MediaType />,
+        element: (
+          <ProtectedRoute>
+            <MediaType />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/movie/category/:query",
-        element: <MediaQuery />,
+        element: (
+          <ProtectedRoute>
+            <MediaQuery />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/tv/category/:query",
-        element: <MediaQuery />,
+        element: (
+          <ProtectedRoute>
+            <MediaQuery />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/search",
-        element: <Search />,
+        element: (
+          <ProtectedRoute>
+            <Search />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "*",
         element: <PageNotFound />,
+      },
+      {
+        path: "/moviezone",
+        element: <MovieLandingPage />,
       },
     ],
   },

@@ -44,6 +44,8 @@ const RegisterPage = () => {
       return;
     }
     // localStorage.clear(); // clear data
+    const name = formData.firstName + formData.lastName;
+    localStorage.setItem("name", name);
     localStorage.setItem("email", formData.email);
     localStorage.setItem("password", formData.password);
     localStorage.setItem("isRegistered", true);
