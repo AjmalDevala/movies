@@ -12,7 +12,7 @@ const MediaComponent = ({ isRoot = false }) => {
   const { pathname } = useLocation();
   const [item, setItem] = useState(null);
   const [media, setMedia] = useState([]);
-
+  const isRegistered = localStorage.getItem("isRegistered");
   const type = pathname.includes("tv") ? "tv" : "movie";
   const queries = isRoot
     ? [QUERY_LIST.movie[0], QUERY_LIST.tv[0]]
@@ -50,7 +50,7 @@ const MediaComponent = ({ isRoot = false }) => {
   return (
     <>
       <div className="lg:flex justify-around p-2">
-        <h1>{value}</h1>
+        <h1 className="button">{value}</h1>
         <button className="button" onClick={() => dispatch(increment())}>
           Increment
         </button>
@@ -61,9 +61,17 @@ const MediaComponent = ({ isRoot = false }) => {
             Decrement
           </button>
         )}
-        <Link to={`/login`}>
-          <button className="gdbutton">Login</button>
-        </Link>
+        {isRegistered ? (
+          <div>
+            <button onClick={() => localStorage.clear()} className="gdbutton">
+              Logout
+            </button>
+          </div>
+        ) : (
+          <Link to={`/login`}>
+            <button className="gdbutton">Login</button>
+          </Link>
+        )}
       </div>
 
       <Link

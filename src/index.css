@@ -94,6 +94,9 @@
            focus:ring-2 focus:ring-purple-500 focus:ring-offset-2;
   }
   
+.inputClass{
+    @apply p-1 w-full rounded-sm border-gray-200 bg-white text-sm text-black
+}
 .media-card {
     width: 200px !important;
 }
